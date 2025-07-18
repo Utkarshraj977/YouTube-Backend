@@ -7,7 +7,7 @@ const connectDB=async ()=>{
         console.log(`mogoose connected !! DB HOST ${connectionInstance.connection.host}`);
 
     }catch (error){
-        console.log("ERROr:",error);
+        console.log("ERROr:",error.message);
         process.exit(1);
     }
 }
