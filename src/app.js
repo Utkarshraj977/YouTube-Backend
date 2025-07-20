@@ -15,6 +15,13 @@ app.use(express.static("public")) //for store the data like image into the publi
 app.use(cookieParser()) // cookie jo store hota hai use is trh se convert kr deta hai ki use aur koi pdh nhi sakta hai sivay server ke
 
 
+//routes import
+import userRouter from './routes/user.routes.js'
+
+//routes declaration
+app.use("/api/v1/users",userRouter)  //link is http://localhost:8000/api/v1/users/register
+
+
 
 export {app}
 
