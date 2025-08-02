@@ -1,4 +1,4 @@
-const asyncHandler=(requestHandler)=>{
+const asyncHandler=(requestHandler)=>{  //If an error occurs (like database failure), Express will not catch it because the function is async.
     return (req,res,next)=>{
         Promise.resolve(requestHandler(req,res,next))
         .catch((err)=>next(err))
